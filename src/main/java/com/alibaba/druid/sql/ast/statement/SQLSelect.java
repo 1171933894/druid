@@ -32,6 +32,9 @@ import com.alibaba.druid.sql.visitor.SQLASTOutputVisitor;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 import com.alibaba.druid.util.JdbcConstants;
 
+/**
+ * SQLSelectStatement包含一个SQLSelect，SQLSelect包含一个SQLSelectQuery，都是组成的关系。SQLSelectQuery有主要的两个派生类，分别是SQLSelectQueryBlock和SQLUnionQuery。
+ */
 public class SQLSelect extends SQLObjectImpl {
 
     protected SQLWithSubqueryClause withSubQuery;

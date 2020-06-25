@@ -19,6 +19,9 @@ import com.alibaba.druid.sql.ast.SQLDataType;
 import com.alibaba.druid.sql.ast.SQLDataTypeImpl;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 
+/**
+ * 例如 ID = 3 这里的3是一个SQLIntegerExpr
+ */
 public class SQLIntegerExpr extends SQLNumericLiteralExpr implements SQLValuableExpr{
     public static final SQLDataType DEFAULT_DATA_TYPE = new SQLDataTypeImpl("bigint");
 

@@ -25,6 +25,9 @@ import com.alibaba.druid.sql.ast.statement.SQLCharacterDataType;
 import com.alibaba.druid.sql.visitor.SQLASTOutputVisitor;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 
+/**
+ * 例如 NAME = 'jobs' 这里的'jobs'是一个SQLCharExpr
+ */
 public class SQLCharExpr extends SQLTextLiteralExpr implements SQLValuableExpr{
     public static final SQLDataType DEFAULT_DATA_TYPE = new SQLCharacterDataType("varchar");
 

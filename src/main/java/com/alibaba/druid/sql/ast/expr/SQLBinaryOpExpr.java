@@ -31,6 +31,9 @@ import com.alibaba.druid.sql.visitor.SQLASTOutputVisitor;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 import com.alibaba.druid.util.Utils;
 
+// 例如 ID = 3 这是一个SQLBinaryOpExpr
+// left是ID (SQLIdentifierExpr)
+// right是3 (SQLIntegerExpr)
 public class SQLBinaryOpExpr extends SQLExprImpl implements SQLReplaceable, Serializable {
 
     private static final long   serialVersionUID = 1L;

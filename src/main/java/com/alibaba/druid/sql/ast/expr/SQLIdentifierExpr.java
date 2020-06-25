@@ -35,6 +35,9 @@ import com.alibaba.druid.sql.ast.statement.SQLTableSource;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 import com.alibaba.druid.util.FnvHash;
 
+/**
+ * 例如 ID = 3 这里的ID是一个SQLIdentifierExpr
+ */
 public final class SQLIdentifierExpr extends SQLExprImpl implements SQLName {
     protected String    name;
     private   long      hashCode64;

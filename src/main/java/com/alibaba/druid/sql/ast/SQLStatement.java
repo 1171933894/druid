@@ -17,6 +17,13 @@ package com.alibaba.druid.sql.ast;
 
 import java.util.List;
 
+/**
+ * 最常用的Statement当然是SELECT/UPDATE/DELETE/INSERT，他们分别是
+ * 1）SQLSelectStatement
+ * 2）SQLUpdateStatement
+ * 3）SQLDeleteStatement
+ * 4）SQLInsertStatement
+ */
 public interface SQLStatement extends SQLObject {
     String          getDbType();
     boolean         isAfterSemi();

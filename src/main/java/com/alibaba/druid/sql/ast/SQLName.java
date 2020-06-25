@@ -15,6 +15,9 @@
  */
 package com.alibaba.druid.sql.ast;
 
+/**
+ * SQLName是一种的SQLExpr的Expr，包括SQLIdentifierExpr、SQLPropertyExpr等
+ */
 public interface SQLName extends SQLExpr {
     String  getSimpleName();
     SQLName clone();

@@ -24,7 +24,10 @@ import com.alibaba.druid.sql.ast.SQLExprImpl;
 import com.alibaba.druid.sql.ast.SQLObject;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 
-public class SQLVariantRefExpr extends SQLExprImpl {
+/**
+ * 例如 select * from where id = ?，这里的?是一个SQLVariantRefExpr，name是'?'
+ */
+public class SQLVariantRefExpr extends SQLExprImpl {// variant：变体
 
     private String  name;
 

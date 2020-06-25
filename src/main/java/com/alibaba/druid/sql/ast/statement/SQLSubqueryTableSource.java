@@ -21,6 +21,9 @@ import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 例如 select * from (select * from temp) a，这里第一层from(...)是一个SQLSubqueryTableSource
+ */
 public class SQLSubqueryTableSource extends SQLTableSourceImpl {
 
     protected SQLSelect select;

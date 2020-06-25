@@ -30,6 +30,8 @@ import com.alibaba.druid.sql.repository.SchemaObject;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 import com.alibaba.druid.util.FnvHash;
 
+// 例如 select * from emp where i = 3，这里的from emp是一个SQLExprTableSource
+// 其中expr是一个name=emp的SQLIdentifierExpr
 public class SQLExprTableSource extends SQLTableSourceImpl implements SQLReplaceable {
 
     protected SQLExpr     expr;

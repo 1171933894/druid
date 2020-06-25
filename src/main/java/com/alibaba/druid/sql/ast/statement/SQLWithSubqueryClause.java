@@ -23,6 +23,19 @@ import com.alibaba.druid.sql.ast.SQLObjectImpl;
 import com.alibaba.druid.sql.ast.SQLStatement;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 
+/* 例如
+WITH RECURSIVE ancestors AS (
+    SELECT *
+    FROM org
+    UNION
+    SELECT f.*
+    FROM org f, ancestors a
+    WHERE f.id = a.parent_id
+)
+SELECT *
+FROM ancestors;
+这里的ancestors AS (...) 是一个SQLWithSubqueryClause.Entry
+*/
 public class SQLWithSubqueryClause extends SQLObjectImpl {
 
     private Boolean           recursive;

@@ -28,10 +28,13 @@ import com.alibaba.druid.sql.ast.expr.SQLPropertyExpr;
 import com.alibaba.druid.sql.visitor.SQLASTVisitor;
 import com.alibaba.druid.util.FnvHash;
 
+// 例如 select * from emp e inner join org o on e.org_id = o.id
+// 其中left 'emp e' 是一个SQLExprTableSource，right 'org o'也是一个SQLExprTableSource
+// condition 'e.org_id = o.id'是一个SQLBinaryOpExpr
 public class SQLJoinTableSource extends SQLTableSourceImpl implements SQLReplaceable {
 
     protected SQLTableSource      left;
-    protected JoinType            joinType;
+    protected JoinType            joinType;// INNER_JOIN/CROSS_JOIN/LEFT_OUTER_JOIN/RIGHT_OUTER_JOIN/...
     protected SQLTableSource      right;
     protected SQLExpr             condition;
     protected final List<SQLExpr> using = new ArrayList<SQLExpr>();
